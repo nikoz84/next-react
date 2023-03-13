@@ -9,6 +9,15 @@ export default function Document() {
             rel="stylesheet"
             type="text/css"
           />
+          <script dangerouslySetInnerHTML={{__html: `
+            window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-NQN7NBL045');
+
+          `}}>
+          </script>
       </Head>
       <body style={{ fontFamily: "Comfortaa, sans-serif" }}>
         <Main />
