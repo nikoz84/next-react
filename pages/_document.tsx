@@ -9,6 +9,8 @@ export default function Document() {
             rel="stylesheet"
             type="text/css"
           />
+          { /* eslint-disable-next-line @next/next/next-script-for-ga */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQN7NBL045"></script>
           <script dangerouslySetInnerHTML={{__html: `
             window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
