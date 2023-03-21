@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Lato, Lobster_Two } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
 
 
 const lobster = Lobster_Two({
@@ -22,9 +23,15 @@ export default function Home() {
         
       </Head>
       <main>
-        <p className={`text-md font-lobster underline`}>OI TUDO BEM</p>
+        <p className={`text-md font-lobster`}>Página de início</p>
+        <Link href={'/about/'} className='mr-5 underline'>
+          Sobre
+        </Link>
+        <Link href={'/faq/'} className='underline mr-5'>
+          FAQ
+        </Link>
         <h1 className={`text-3xl font-bold text-gray-900`}>
-          Bem-vindo ao site de niko dev não somos 
+          Bem-vindo site feito com next.js e react.js 
         </h1>
       </main>
     </>
