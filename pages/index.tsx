@@ -5,7 +5,7 @@ import { Lato, Lobster_Two } from 'next/font/google'
 import Link from 'next/link'
 import GlobalStyle from '@/src/components/GlobalStyle'
 
-
+//
 const lobster = Lobster_Two({
   weight: [ "400", "700"],
   style: "normal",
