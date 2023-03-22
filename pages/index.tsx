@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
+//import Image from 'next/image'
 import { Lato, Lobster_Two } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+//import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import GlobalStyle from '@/src/components/GlobalStyle'
 
 
 const lobster = Lobster_Two({
@@ -22,7 +23,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
-      <main>
+      <GlobalStyle />
+      <main className="p-10">
         <p className={`text-md font-lobster`}>Página de início</p>
         <Link href={'/about/'} className='mr-5 underline'>
           Sobre
