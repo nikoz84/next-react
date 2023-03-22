@@ -3,17 +3,17 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   images: {
-    domains: []
+    domains: [],
   },
   async redirects() {
     return [
       {
-        source: '/sobre/',
-        destination: '/about/',
-        permanent: true
-      }
-    ]
-  }
-}
+        source: "/sobre/",
+        destination: "/about/",
+        permanent: true,
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

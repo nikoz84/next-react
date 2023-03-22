@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --check .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@types/node": "18.15.0",
@@ -24,12 +26,13 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "prettier": "^2.8.6"
   },
   "husky": {
     "hooks": {
       "pre-commit": "prettier --write . && git add -A .",
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"      
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
   },
   "config": {
