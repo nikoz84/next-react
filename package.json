@@ -10,7 +10,7 @@
         "prettier": "prettier --check .",
         "format": "prettier --write .",
         "test": "exit",
-        "commit": "npx cz",
+        "commit": "git-cz",
         "prepare": "husky install"
     },
     "dependencies": {
