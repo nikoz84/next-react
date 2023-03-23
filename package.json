@@ -31,7 +31,7 @@
     },
     "husky": {
         "hooks": {
-          "pre-commit": "npm run prettier && npm run format",
+          "pre-commit": "npm run prettier && npm run format && echo 'ok'",
           "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
         }
     },
