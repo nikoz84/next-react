@@ -10,7 +10,8 @@
         "prettier": "prettier --check .",
         "format": "prettier --write .",
         "test": "exit",
-        "commit": "npx cz"
+        "commit": "npx cz",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@types/node": "18.15.0",
@@ -27,15 +28,15 @@
         "typescript": "4.9.5"
     },
     "devDependencies": {
+        "@commitlint/cli": "^17.5.0",
+        "@commitlint/config-conventional": "^17.4.4",
         "@types/next": "^9.0.0",
         "cz-conventional-changelog": "^3.3.0",
-        "prettier": "^2.8.6",
-        "husky": "^8.0.3"
+        "husky": "^8.0.3",
+        "prettier": "^2.8.6"
     },
     "husky": {
-        "hooks": {
-            "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
-        }
+        "hooks": {}
     },
     "config": {
         "commitizen": {
