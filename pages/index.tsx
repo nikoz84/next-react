@@ -1,7 +1,5 @@
 import Head from 'next/head'
-//import Image from 'next/image'
 import { Lato, Lobster_Two } from 'next/font/google'
-//import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import GlobalStyle from '@/src/components/GlobalStyle'
 
