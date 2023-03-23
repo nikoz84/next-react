@@ -9,7 +9,8 @@
         "lint": "next lint",
         "prettier": "prettier --check .",
         "format": "prettier --write .",
-        "test": "exit"
+        "test": "exit",
+        "commit": "npx cz"
     },
     "dependencies": {
         "@types/node": "18.15.0",
