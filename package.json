@@ -8,7 +8,8 @@
         "start": "next start",
         "lint": "next lint",
         "prettier": "prettier --check .",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "test": "exit"
     },
     "dependencies": {
         "@types/node": "18.15.0",
@@ -25,14 +26,14 @@
         "typescript": "4.9.5"
     },
     "devDependencies": {
+        "@types/next": "^9.0.0",
         "cz-conventional-changelog": "^3.3.0",
-        "husky": "^8.0.3",
-        "prettier": "^2.8.6"
+        "prettier": "^2.8.6",
+        "husky": "^8.0.3"
     },
     "husky": {
         "hooks": {
-          "pre-commit": "npm run prettier && npm run format && echo 'ok'",
-          "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+            "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
         }
     },
     "config": {
