@@ -1,23 +1,18 @@
 import { ReactNode } from 'react'
 
 export default function Title({
-    children,
     asTag,
+    children,
 }: {
-    children: ReactNode
     asTag: any
+    children?: ReactNode
 }) {
-    const Tag = asTag
+    const HtmlTag = asTag
+    const style = { color: '#b94f4f' }
+
     return (
         <>
-            <Tag>{children}</Tag>
-            <style jsx>
-                {`
-                    ${Tag} {
-                        color: red;
-                    }
-                `}
-            </style>
+            <HtmlTag style={style}>{children}</HtmlTag>
         </>
     )
 }

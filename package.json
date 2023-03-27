@@ -9,15 +9,19 @@
         "lint": "next lint",
         "prettier": "prettier --check .",
         "format": "prettier --write .",
-        "test": "exit",
+        "test": "vitest --coverage -- --watchAll=false",
+        "test:ui": "vitest --ui",
         "commit": "git-cz",
         "prepare": "husky install"
     },
     "dependencies": {
+        "@testing-library/react": "^14.0.0",
         "@types/node": "18.15.0",
         "@types/react": "18.0.28",
         "@types/react-dom": "18.0.11",
+        "@vitejs/plugin-react": "^3.1.0",
         "autoprefixer": "^10.4.14",
+        "c8": "^7.13.0",
         "eslint": "8.36.0",
         "eslint-config-next": "13.2.4",
         "next": "13.2.4",
@@ -31,9 +35,14 @@
         "@commitlint/cli": "^17.5.0",
         "@commitlint/config-conventional": "^17.4.4",
         "@types/next": "^9.0.0",
+        "@vitest/coverage-c8": "^0.29.7",
+        "@vitest/ui": "^0.29.7",
         "cz-conventional-changelog": "^3.3.0",
+        "happy-dom": "^8.9.0",
         "husky": "^8.0.3",
-        "prettier": "^2.8.6"
+        "jsdom": "^21.1.1",
+        "prettier": "^2.8.6",
+        "vitest": "^0.29.7"
     },
     "husky": {
         "hooks": {}

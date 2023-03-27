@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import { Lato, Lobster_Two } from 'next/font/google'
-import Link from 'next/link'
-import GlobalStyle from '@/src/components/GlobalStyle'
 
-//lobster
+//lobster FONTS
 const lobster = Lobster_Two({
     weight: ['400', '700'],
     style: 'normal',
@@ -26,18 +24,14 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <GlobalStyle />
+
             <main className="p-10">
-                <p className={`text-md font-lobster`}>Página de início</p>
-                <Link href={'/about/'} className="mr-5 underline">
-                    Sobre
-                </Link>
-                <Link href={'/faq/'} className="underline mr-5">
-                    FAQ
-                </Link>
-                <h1 className={`text-3xl font-bold text-gray-900`}>
-                    Bem-vindo site feito com next.js e react.js
-                </h1>
+                <article className="mt-5">
+                    <h1 className={`text-3xl font-bold text-gray-900`}>
+                        Bem-vindo site feito com next.js e react.js
+                    </h1>
+                    <p className={`text-md font-lobster`}>Página de início</p>
+                </article>
             </main>
         </>
     )
