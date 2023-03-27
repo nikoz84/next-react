@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, SyntheticEvent } from 'react'
 
 export default function Title({
     asTag,
@@ -10,9 +10,15 @@ export default function Title({
     const HtmlTag = asTag
     const style = { color: '#b94f4f' }
 
+    function handleClick(e: SyntheticEvent<HTMLElement>) {
+        const target = e.currentTarget
+        target.style.backgroundColor = '#b94f4f'
+        target.style.color = '#ece6e6'
+    }
+
     return (
-        <>
-            <HtmlTag style={style}>{children}</HtmlTag>
-        </>
+        <HtmlTag style={style} onClick={handleClick}>
+            {children}
+        </HtmlTag>
     )
 }

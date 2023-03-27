@@ -9,7 +9,7 @@
         "lint": "next lint",
         "prettier": "prettier --write . && prettier --check .",
         "test": "vitest --coverage run --watch",
-        "test:ui": "vitest --coverage --ui",
+        "coverage": "vitest --coverage --ui",
         "commit": "git-cz",
         "prepare": "husky install"
     },
