@@ -7,10 +7,9 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "prettier": "prettier --check .",
-        "format": "prettier --write .",
-        "test": "vitest --coverage -- --watchAll=false",
-        "test:ui": "vitest --ui",
+        "prettier": "prettier --write . && prettier --check .",
+        "test": "vitest --coverage run --watch",
+        "test:ui": "vitest --coverage --ui",
         "commit": "git-cz",
         "prepare": "husky install"
     },
