@@ -1,7 +1,13 @@
 import Title from '@/src/components/Title'
 import Link from 'next/link'
+import { NextPage } from 'next'
 
-export default function AboutPage() {
+interface Props {
+    userAgent?: string;
+}
+
+
+const AboutPage: NextPage<Props> = ({userAgent})=> {
     return (
         <main className="p-10">
             <article>
@@ -9,9 +15,16 @@ export default function AboutPage() {
                     About page
                 </h1>
                 <Title asTag="h2">Título</Title>
-                <p>Lorem ipsum</p>
+                <p>{userAgent}</p>
             </article>
             <Link href="/">Go to home page</Link>
         </main>
     )
+} 
+
+AboutPage.getInitialProps = async ({ req }) => {
+    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
+    return { userAgent }
 }
+
+export default AboutPage

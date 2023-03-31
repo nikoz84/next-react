@@ -5,11 +5,6 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
-                    rel="stylesheet"
-                    type="text/css"
-                />
                 {/* eslint-disable-next-line @next/next/next-script-for-ga */}
                 <script
                     async
@@ -28,7 +23,7 @@ export default function Document() {
                     }}
                 ></script>
             </Head>
-            <body style={{ fontFamily: 'Comfortaa, sans-serif' }}>
+            <body>
                 <Nav />
                 <Main />
                 <NextScript />
