@@ -1,7 +1,10 @@
+import ActiveLink from '@/src/components/ActiveLink/ActiveLink'
+import Layout from '@/src/components/Layout/Layout'
 import Head from 'next/head'
+import { NextPage } from 'next'
+import { ReactNode } from 'react'
 
-
-export default function Home() {
+export default function Home () {
     return (
         <>
             <Head>
@@ -16,14 +19,17 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={`p-10`}>
-                <article className="mt-5">
-                    <h1 className={`text-3xl font-bold text-gray-900`}>
-                        Bem-vindo site feito com next.js e react.js
-                    </h1>
-                    <p className={`text-md`}>Página de início</p>
-                </article>
-            </main>
+            <Layout>
+                <main className={`p-10`}>
+                    <article className="mt-5">
+                        <h1 className={`text-3xl font-bold text-gray-900`}>
+                            Bem-vindo site feito com next.js e react.js
+                        </h1>
+                        <ActiveLink href={'/'}>Exemplo</ActiveLink>
+                        <p className={`text-md`}>Página de início</p>
+                    </article>
+                </main>
+            </Layout>
         </>
     )
 }

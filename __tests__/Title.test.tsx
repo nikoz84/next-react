@@ -10,7 +10,7 @@ import {
 } from 'vitest'
 import Title from '../src/components/Title'
 import { cleanup, render, screen } from '@testing-library/react'
-import userEvent  from '@testing-library/user-event'
+import userEvent from '@testing-library/user-event'
 
 beforeEach(() => {
     render(
@@ -34,7 +34,7 @@ describe('Title Component test', () => {
         expect(screen.getByText(/Text/i)).toBeDefined()
     })
     it('Should change the background and color text', async () => {
-        const user = userEvent.setup();
+        const user = userEvent.setup()
         const title = await screen.getByText(/Text/i)
         let styles = getComputedStyle(title)
         expect(styles.color).toBe('#b94f4f')

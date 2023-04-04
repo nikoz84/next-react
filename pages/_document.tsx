@@ -1,7 +1,8 @@
-import Nav from '@/src/components/nav'
 import { Html, Head, Main, NextScript } from 'next/document'
+import Layout from '@/src/components/Layout/Layout'
 
 export default function Document() {
+    
     return (
         <Html lang="en">
             <Head>
@@ -16,15 +17,12 @@ export default function Document() {
                         window.dataLayer = window.dataLayer || [];
                           function gtag(){dataLayer.push(arguments);}
                           gtag('js', new Date());
-                        
                           gtag('config', 'G-NQN7NBL045');
-
                       `,
                     }}
                 ></script>
             </Head>
             <body>
-                <Nav />
                 <Main />
                 <NextScript />
             </body>
