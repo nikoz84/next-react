@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 import { ReactNode } from 'react'
 
-export default function Home () {
+export default function Home() {
     return (
         <>
             <Head>

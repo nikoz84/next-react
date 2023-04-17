@@ -5,13 +5,13 @@ import App from 'next/app'
 class TheApp extends App {
     render() {
         const { Component, pageProps, router } = this.props
-        return <>
-            <GlobalStyle/>
-            <Component {...pageProps } />
-        </>
+        return (
+            <>
+                <GlobalStyle />
+                <Component {...pageProps} />
+            </>
+        )
     }
 }
-
-
 
 export default TheApp

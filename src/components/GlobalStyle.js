@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 
 const pressStart = localFont({
-    src: '../../public/fonts/PressStart-Regular.woff2'
+    src: '../../public/fonts/PressStart-Regular.woff2',
 })
 
 const comfortaa = localFont({
@@ -53,42 +53,42 @@ export default function GlobalStyle() {
                 --line-height: 1.7rem;
                 --transition: 0.3s;
             }
-                /* Variables fin */
+            /* Variables fin */
 
             html {
                 scroll-behavior: smooth;
             }
 
-                /* CSS Resets */
-                * {
+            /* CSS Resets */
+            * {
                 margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                }
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-                ul {
-                    list-style-type: none;
-                }
+            ul {
+                list-style-type: none;
+            }
 
-                a {
-                    text-decoration: none;
-                    color: var(--primary-color);
-                }
+            a {
+                text-decoration: none;
+                color: var(--primary-color);
+            }
 
-                a:hover {
-                    color: var(--secondary-color);
-                }
+            a:hover {
+                color: var(--secondary-color);
+            }
 
-                body {
-                    font-family: var(--font-family);
-                }
-                .logo {
-                    font-family: var(--logo);
-                }
-                .active {
-                    font-weight: bold;
-                    color: var(--primary-color)
-                }
+            body {
+                font-family: var(--font-family);
+            }
+            .logo {
+                font-family: var(--logo);
+            }
+            .active {
+                font-weight: bold;
+                color: var(--primary-color);
+            }
         `}</style>
     )
 }

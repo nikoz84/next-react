@@ -2,19 +2,18 @@ const routes = [
     {
         label: 'Home',
         path: '/',
-        targetSegment: 'home'
+        targetSegment: 'home',
     },
     {
-        label: 'About',
-        path: '/about/',
-        targetSegment: 'about'
+        label: 'About me',
+        path: '/about',
+        targetSegment: 'about',
     },
     {
         label: 'Login',
-        path: '/login/',
-        targetSegment: 'login'
+        path: '/login',
+        targetSegment: 'login',
     },
 ]
-
 
 export default routes
