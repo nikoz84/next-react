@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import routes from '@/src/utils/routes'
 import ActiveLink from '../ActiveLink/ActiveLink'
 
@@ -8,7 +9,12 @@ export default function Nav() {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center">
                     <span className="logo self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        Nikoz84
+                        <Image
+                            src={`/logo.png`}
+                            height={`50`}
+                            width={`180`}
+                            alt="logo image"
+                        ></Image>
                     </span>
                 </Link>
                 <button
