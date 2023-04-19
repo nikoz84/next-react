@@ -14,6 +14,9 @@ const nextConfig = {
             },
         ]
     },
+    experimental: {
+        enableUndici: true
+    }
 }
 
 module.exports = nextConfig

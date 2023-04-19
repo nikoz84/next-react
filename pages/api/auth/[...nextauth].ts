@@ -7,6 +7,7 @@ export default NextAuth({
         //jwt: true,
         maxAge: 30 * 24 * 60 * 60,
     },
+    secret: process.env.NEXTAUTH_SECRET,
     providers: [
         CredentialProvider({
             name: 'credentials',
