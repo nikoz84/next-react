@@ -8,7 +8,7 @@ import {
     describe,
     it,
 } from 'vitest'
-import Title from '../src/components/Title'
+import Title from '../src/components/Title/Title'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 

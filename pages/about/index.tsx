@@ -1,4 +1,4 @@
-import Title from '@/src/components/Title'
+import Title from '@/src/components/Title/Title'
 import Link from 'next/link'
 import { NextPage } from 'next'
 import Layout from '@/src/components/Layout/Layout'

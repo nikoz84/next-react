@@ -6,9 +6,9 @@ interface IUser {
     createdAt: string
 }
 
-type TShowUser = Exclude<IUser, "password">
+type TShowUser = Exclude<IUser, 'password'>
 
-interface IShowUser extends TShowUser  {}
+interface IShowUser extends TShowUser {}
 
 interface ILogin {
     username: string

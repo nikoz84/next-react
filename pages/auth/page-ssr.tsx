@@ -1,5 +1,5 @@
 import Layout from '@/src/components/Layout/Layout'
-import Title from '@/src/components/Title'
+import Title from '@/src/components/Title/Title'
 import { tokenService } from '@/src/utils/services/Auth/tokenService'
 import { AppProps } from 'next/app'
 import Link from 'next/link'

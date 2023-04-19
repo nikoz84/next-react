@@ -6,7 +6,9 @@ import { ptBR } from 'date-fns/locale'
 const userModel = {
     async getUsers(): Promise<IShowUser[] | undefined> {
         try {
-            const users = await client.user.findMany({select: {name: true, id: true, email: true, createdAt: true}})
+            const users = await client.user.findMany({
+                select: { name: true, id: true, email: true, createdAt: true },
+            })
 
             if (users.length > 0) {
                 return users.map((user: any) => {

@@ -1,7 +1,7 @@
 import Layout from '@/src/components/Layout/Layout'
 import { AppContext } from 'next/app'
 import { IUser } from '@/src/types/UserTypes'
-import UserList from './list'
+import UserList from '@/src/components/Users/userList'
 import { http } from '@/src/utils/services/Http/httpService'
 
 export default function CreateUser({ users }: { users: any }) {

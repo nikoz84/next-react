@@ -1,5 +1,5 @@
 import Layout from '@/src/components/Layout/Layout'
-import Title from '@/src/components/Title'
+import Title from '@/src/components/Title/Title'
 import Link from 'next/link'
 
 export default function FaqPage() {
