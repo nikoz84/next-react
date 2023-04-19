@@ -6,6 +6,10 @@ interface IUser {
     createdAt: string
 }
 
+type TShowUser = Exclude<IUser, "password">
+
+interface IShowUser extends TShowUser  {}
+
 interface ILogin {
     username: string
     password: string
@@ -18,4 +22,4 @@ interface IUserRegistration {
     name: string
 }
 
-export type { IUser, ILogin, IUserRegistration }
+export type { IUser, ILogin, IUserRegistration, IShowUser }

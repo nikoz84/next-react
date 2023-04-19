@@ -23,10 +23,9 @@ export default function Home() {
                 <main className={`p-10`}>
                     <article className="mt-5">
                         <h1 className={`text-3xl font-bold text-gray-900`}>
-                            Bem-vindo site feito com next.js e react.js
+                            Welcome to my personal blog...
                         </h1>
-                        <ActiveLink href={'/'}>Exemplo</ActiveLink>
-                        <p className={`text-md`}>Página de início</p>
+                        <p className={`text-md`}>Home page</p>
                     </article>
                 </main>
             </Layout>

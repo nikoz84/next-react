@@ -4,30 +4,26 @@ import { IUser } from '@/src/types/UserTypes'
 import UserList from './list'
 import { http } from '@/src/utils/services/Http/httpService'
 
-export default function CreateUser({users}: {users: any}) {
-    
-    console.log(users)
+export default function CreateUser({ users }: { users: any }) {
     return (
         <Layout>
             <main className={`p-10`}>
                 <article className="mt-5">
-                        {users.map((user: IUser) => {
-                            return <UserList key={user.id} user={user} />
-                        })}
-
+                    {users.map((user: IUser) => {
+                        return <UserList key={user.id} user={user} />
+                    })}
                 </article>
             </main>
         </Layout>
     )
 }
 
-export async function getServerSideProps(context:AppContext) {
-    
+export async function getServerSideProps(context: AppContext) {
     const resp = await http('/api/users')
 
     return {
-      props: {
-        users: resp.body   
-      },
+        props: {
+            users: resp.body,
+        },
     }
 }

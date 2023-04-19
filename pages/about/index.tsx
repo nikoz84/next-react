@@ -15,7 +15,7 @@ const AboutPage: NextPage<Props> = ({ userAgent }) => {
                     <h1 className={`text-3xl font-bold text-gray-900`}>
                         About page
                     </h1>
-                    <Title asTag="h2">Título</Title>
+                    <Title asTag="h2">Name</Title>
                     <p>{userAgent}</p>
                 </article>
                 <Link href="/">Go to home page</Link>

@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next'
 import userModel from '@/src/utils/db/models/userModel'
 

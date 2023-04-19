@@ -1,7 +1,9 @@
-import Layout from "@/src/components/Layout/Layout";
+import Layout from '@/src/components/Layout/Layout'
 
 export default function DashBoard() {
-    return <Layout>
-        <h1>Dashboard</h1>
-    </Layout>
+    return (
+        <Layout>
+            <h1>Dashboard</h1>
+        </Layout>
+    )
 }

@@ -8,12 +8,14 @@ import { http } from '@/src/utils/services/Http/httpService'
 
 export default function Login() {
     const router = useRouter()
-    const [user, setUser] = useState<IUserRegistration & { passwordConfirmation: string }>({
+    const [user, setUser] = useState<
+        IUserRegistration & { passwordConfirmation: string }
+    >({
         password: '',
         email: '',
         passwordConfirmed: false,
         name: '',
-        passwordConfirmation: ''
+        passwordConfirmation: '',
     })
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -28,15 +30,18 @@ export default function Login() {
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
-        const isValid = user.password === user.passwordConfirmation && user.password != ''
-        if(isValid){
-            const newUser = {...user, passwordConfirmed: isValid}
-            const resp = await http('/api/auth/register', { method: 'POST', body: { user: newUser}})
-            if(resp.status === 200){
+        const isValid =
+            user.password === user.passwordConfirmation && user.password != ''
+        if (isValid) {
+            const newUser = { ...user, passwordConfirmed: isValid }
+            const resp = await http('/api/auth/register', {
+                method: 'POST',
+                body: { user: newUser },
+            })
+            if (resp.status === 200) {
                 router.push('/api/auth/signin')
             }
         }
-        
     }
     return (
         <>
@@ -51,7 +56,6 @@ export default function Login() {
             </Head>
             <Layout>
                 <main className="p-10">
-                    
                     <div className="flex flex-col justify-center items-center mt-8">
                         <div className="card w-96 bg-base-100 shadow-xl">
                             <div className="card-body">
@@ -98,12 +102,13 @@ export default function Login() {
                                         />
                                     </div>
                                     <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">Register</button>
+                                        <button className="btn btn-primary">
+                                            Register
+                                        </button>
                                     </div>
                                 </form>
-                                
                             </div>
-                            </div>
+                        </div>
                         <div>
                             <pre>{JSON.stringify(user, null, 2)}</pre>
                         </div>

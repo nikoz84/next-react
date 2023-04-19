@@ -1,6 +1,6 @@
 async function http(endPoint: RequestInfo | URL, options?: any) {
     const fullUrl = process.env.NEXT_API_URL || ''
-    return fetch(fullUrl  + endPoint, {
+    return fetch(fullUrl + endPoint, {
         ...options,
         headers: {
             'Content-Type': 'application/json',

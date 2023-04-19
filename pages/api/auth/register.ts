@@ -7,21 +7,17 @@ interface AccessTokenResponse {
     user: object | null
 }
 
-export default function handler(
-    req: NextApiRequest,
-    res: NextApiResponse
-) {
-    
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { user } = req.body
 
     let newUser = null
-    if(user.passwordConfirmed){
+    if (user.passwordConfirmed) {
         newUser = authService.register(user)
     }
-    
-    if(!newUser){
+
+    if (!newUser) {
         res.status(400).json({
-            message: 'user already registered'
+            message: 'user already registered',
         })
     }
 
