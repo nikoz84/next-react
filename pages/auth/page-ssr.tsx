@@ -4,7 +4,7 @@ import { tokenService } from '@/src/utils/services/Auth/tokenService'
 import { AppProps } from 'next/app'
 import Link from 'next/link'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next'
-import { authService } from '@/src/utils/services/Auth/authService'
+import { authService } from '@/src/utils/services/Auth/__authService'
 
 export default function PageSSR(props: AppProps) {
     return (

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { authService } from '../utils/services/Auth/authService'
+import { authService } from '../utils/services/Auth/__authService'
 
 export default function useSession() {
     const [session, setSession] = useState(null)

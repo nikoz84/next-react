@@ -11,8 +11,13 @@ const routes = [
     },
     {
         label: 'Login',
-        path: '/login',
+        path: '/api/auth/signin/',
         targetSegment: 'login',
+    },
+    {
+        label: 'Dashboard',
+        path: '/dashboard/',
+        targetSegment: 'dashboard',
     },
 ]
 
