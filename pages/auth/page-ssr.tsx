@@ -14,7 +14,6 @@ export default function PageSSR(props: AppProps) {
                         Auth SSR
                     </h1>
                     <Title asTag="h2">Título</Title>
-                    
                 </article>
                 <Link href="/">Go to home page</Link>
             </main>
@@ -26,8 +25,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
     //const session = await authService.getSession(ctx)
 
     return {
-        props: {
-            
-        },
+        props: {},
     }
 }

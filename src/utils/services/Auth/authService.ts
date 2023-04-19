@@ -37,12 +37,16 @@ const authService = {
                     password: encryptedPassword,
                 },
             })
-
+            console.log(newUser)
             if (!newUser) {
                 throw new Error('User already exists')
             }
 
-            return newUser
+            return {
+                id: newUser.id,
+                name: newUser.name,
+                email: newUser.email,
+            }
         } catch (error) {
             console.log(error)
         }
