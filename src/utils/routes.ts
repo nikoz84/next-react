@@ -6,7 +6,7 @@ const routes = [
     },
     {
         label: 'About me',
-        path: '/about',
+        path: '/about/',
         targetSegment: 'about',
     },
     {

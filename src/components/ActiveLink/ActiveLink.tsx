@@ -12,18 +12,16 @@ export default function ActiveLink({
     ...props
 }: ActiveLinkProps) {
     const pathname = usePathname()
+    
     const isCurrent =
         pathname === href ||
         pathname === props?.as ||
         pathname?.startsWith(String(props.as))
-
+    
     const isActive = isCurrent ? 'active' : ''
 
     return (
-        <Link
-            href={href}
-            className={`${isActive}`}
-        >
+        <Link href={href} className={`${isActive}`}>
             {children}
         </Link>
     )
