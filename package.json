@@ -11,7 +11,8 @@
         "test": "vitest --coverage run --watch",
         "coverage": "vitest --coverage --ui",
         "commit": "git-cz",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "postinstall": "npx prisma generate"
     },
     "dependencies": {
         "@prisma/client": "^4.13.0",
