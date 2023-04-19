@@ -6,7 +6,7 @@ import Layout from '@/src/components/Layout/Layout'
 import { IUserRegistration } from '@/src/types/UserTypes'
 import { http } from '@/src/utils/services/Http/httpService'
 
-export default function Login() {
+export default function RegisterForm() {
     const router = useRouter()
     const [user, setUser] = useState<
         IUserRegistration & { passwordConfirmation: string }
@@ -33,12 +33,10 @@ export default function Login() {
         const isValid =
             user.password === user.passwordConfirmation && user.password != ''
         if (isValid) {
-            
             const resp = await http.post('/api/auth/register', {
                 user: { ...user, passwordConfirmed: isValid },
             })
-            
-            
+
             if (resp.status === 200) {
                 router.push('/api/auth/signin')
             }
@@ -47,7 +45,7 @@ export default function Login() {
     return (
         <>
             <Head>
-                <title>Registro page</title>
+                <title>Register page</title>
                 <meta name="description" content="enter to registration page" />
                 <meta
                     name="viewport"

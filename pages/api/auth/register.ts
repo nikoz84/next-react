@@ -7,7 +7,10 @@ interface AccessTokenResponse {
     user: object | null
 }
 
-export default async function  handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+    req: NextApiRequest,
+    res: NextApiResponse
+) {
     const { user } = req.body
 
     let newUser = null

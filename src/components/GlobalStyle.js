@@ -87,7 +87,6 @@ export default function GlobalStyle() {
             }
             .active {
                 font-weight: bold;
-                color: var(--primary-color);
             }
         `}</style>
     )
