@@ -34,7 +34,9 @@ export default function Login() {
             user.password === user.passwordConfirmation && user.password != ''
         if (isValid) {
             const newUser = { ...user, passwordConfirmed: isValid }
-            const resp = await http.post('/api/auth/register', { user: newUser })
+            const resp = await http.post('/api/auth/register', {
+                user: newUser,
+            })
             if (resp.status === 200) {
                 router.push('/api/auth/signin')
             }

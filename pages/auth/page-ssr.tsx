@@ -4,7 +4,6 @@ import { tokenService } from '@/src/utils/services/Auth/tokenService'
 import { AppProps } from 'next/app'
 import Link from 'next/link'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next'
-import { authService } from '@/src/utils/services/Auth/__authService'
 
 export default function PageSSR(props: AppProps) {
     return (
@@ -15,7 +14,7 @@ export default function PageSSR(props: AppProps) {
                         Auth SSR
                     </h1>
                     <Title asTag="h2">Título</Title>
-                    <pre>{JSON.stringify(props, null, 2)}</pre>
+                    
                 </article>
                 <Link href="/">Go to home page</Link>
             </main>
@@ -24,11 +23,11 @@ export default function PageSSR(props: AppProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
-    const session = await authService.getSession(ctx)
+    //const session = await authService.getSession(ctx)
 
     return {
         props: {
-            session,
+            
         },
     }
 }

@@ -13,10 +13,7 @@ const nextConfig = {
                 permanent: true,
             },
         ]
-    },
-    experimental: {
-        enableUndici: true,
-    },
+    }
 }
 
 module.exports = nextConfig
