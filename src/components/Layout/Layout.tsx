@@ -21,7 +21,7 @@ const Layout = ({ children }: IProps) => {
                         <Link href={`/`}>
                             <Image
                                 priority
-                                style={{ height: '63px', width: '190px'}}
+                                style={{ height: '63px', width: '190px' }}
                                 src={`/logo.svg`}
                                 alt="logo"
                                 width={`190`}
