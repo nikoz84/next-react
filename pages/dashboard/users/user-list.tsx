@@ -19,11 +19,11 @@ export default function CreateUser({ users }: { users: any }) {
 }
 
 export async function getServerSideProps(context: AppContext) {
-    const resp = await http('/api/users')
+    const resp = await http.get('/api/users')
 
     return {
         props: {
-            users: resp.body,
+            users: resp.data,
         },
     }
 }
