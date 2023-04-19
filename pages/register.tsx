@@ -109,9 +109,6 @@ export default function Login() {
                                 </form>
                             </div>
                         </div>
-                        <div>
-                            <pre>{JSON.stringify(user, null, 2)}</pre>
-                        </div>
                     </div>
                 </main>
             </Layout>
